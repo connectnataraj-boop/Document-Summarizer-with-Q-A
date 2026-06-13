@@ -11,6 +11,11 @@ from pypdf import PdfReader
 
 load_dotenv()
 
+import streamlit as st
+os.environ["GROQ_API_KEY"] = st.secrets.get("GROQ_API_KEY", os.getenv("GROQ_API_KEY", ""))
+os.environ["OPENAI_API_KEY"] = st.secrets.get("OPENAI_API_KEY", os.getenv("OPENAI_API_KEY", ""))
+os.environ["PINECONE_INDEX_NAME"] = st.secrets.get("PINECONE_INDEX_NAME", os.getenv("PINECONE_INDEX_NAME", ""))
+
 st.set_page_config(page_title="Document Q&A", page_icon="📄")
 st.title("📄 Document Summarizer & Q&A")
 
