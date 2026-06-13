@@ -1,0 +1,9 @@
+langgraph
+langchain-groq
+langchain-openai
+langchain-pinecone
+langchain-text-splitters
+langchain-core
+pypdf
+streamlit
+python-dotenv
