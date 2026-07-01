@@ -44,7 +44,7 @@ class NodeData(TypedDict):
 def get_llm():
     return ChatGroq(
         api_key=os.getenv("GROQ_API_KEY"),
-        model="llama-3.3-70b-versatile",
+        model="qwen/qwen3.6-27b",
         temperature=0.0
     )
 
