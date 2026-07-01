@@ -218,6 +218,12 @@ if st.session_state.pdf_ready:
     if not st.session_state.waiting_feedback:
         query = st.chat_input("Ask a question about the document...")
         if query:
+            if query.strip().lower() == "exit":
+                st.success("👋 Goodbye! Upload a new PDF to start again.")
+                for key in ["pdf_ready", "summary", "vectorstore", "chat_history",
+                    "answer", "retrieved_chunks", "retry_count", "waiting_feedback"]:
+                    del st.session_state[key]
+                st.stop()
             with st.chat_message("user"):
                 st.write(query)
             with st.chat_message("assistant"):
