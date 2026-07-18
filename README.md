@@ -424,7 +424,7 @@ python-dotenv
 
 ### Option 1 — Streamlit UI (recommended)
 ```bash
-streamlit run app_v3.py
+streamlit run app.py
 ```
 Opens at `http://localhost:8501`
 
