@@ -174,7 +174,7 @@ This separation means the core logic is testable independently of the UI.
 | Tool | Role | Why Chosen |
 |---|---|---|
 | **LangGraph** | Agentic state machine orchestration | Stateful loops, conditional routing, human-in-loop |
-| **LLaMA 3.3 70B via Groq** | Summarization + Q&A LLM | Free tier, sub-second inference, powerful open model |
+| **LLaMA qwen/qwen3.6-27b via Groq** | Summarization + Q&A LLM | Free tier, sub-second inference, powerful open model |
 | **OpenAI text-embedding-3-small** | Text vectorization (1536-dim) | Best price/performance for embeddings |
 | **Pinecone** | Vector database | Fast cosine similarity search at scale |
 | **LangChain** | Text splitting + Pinecone integration | RecursiveCharacterTextSplitter + PineconeVectorStore |
