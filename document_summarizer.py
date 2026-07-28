@@ -24,6 +24,7 @@ class NodeData(TypedDict):
     raw_text: str
     chunks: List[str]
     summary: str
+    vectorstore: PineconeVectorStore
 
     # Q&A
     user_input: str
