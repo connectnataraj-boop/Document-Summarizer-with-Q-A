@@ -8,7 +8,7 @@ from langchain_groq import ChatGroq
 from langchain_openai import OpenAIEmbeddings
 from langchain_pinecone import PineconeVectorStore
 from pypdf import PdfReader
-from IPython.display import Image, display
+
 
 load_dotenv()
 
