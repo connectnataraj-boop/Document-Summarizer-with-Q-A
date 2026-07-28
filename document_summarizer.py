@@ -45,7 +45,7 @@ class NodeData(TypedDict):
 def get_llm():
     return ChatGroq(
         api_key=os.getenv("GROQ_API_KEY"),
-        model="qwen/qwen3.6-27b",
+        model="openai/gpt-oss-120b",
         temperature=0.0
     )
 
@@ -58,9 +58,9 @@ def load_pdf(state: NodeData) -> dict:
         reader = PdfReader(state["pdf_path"])
         pages = [page.extract_text()
                  for page in reader.pages if page.extract_text()]
-        return "\n".join(pages).strip()
+        return {"raw_text": "\n".join(pages).strip()}
     except Exception as e:
-        return f"Error reading PDF: {str(e)}"
+        return {"raw_text": f"Error reading PDF: {str(e)}"}
 
 
 def chunk_text(state: NodeData) -> dict:
